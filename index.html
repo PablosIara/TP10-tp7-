@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="botonesPrincipales" id="botonVolver" onclick="volverInicio()" style="display: none;">
+        VOLVER
+    </button>
+ 
+    <!-- ESTUDIANTE -->
+    <div>
+        <button class="botonesPrincipales" onclick="crearEstudiante()">Crear Estudiante</button>
+        <div id="crearEstudiante" style="display: none;">
+            <h1 class="titulo">ESTUDIANTES</h1>
+            <form>
+                <label class="NEC" for="nombre">Nombre: </label>
+                <input type="text" id="nombreEST">
+                <br>
+                <label class="NEC" for="edad">Edad: </label>
+                <input type="number" id="edad" min="1">
+                <br>
+                <label class="NEC" for="curso">Curso: </label>
+                <select id="curso">
+                    <option value="1ro">1ro</option>
+                    <option value="2do">2do</option>
+                    <option value="3ro">3ro</option>
+                    <option value="4to">4to</option>
+                    <option value="5to">5to</option>
+                    <option value="6to">6to</option>
+                    <option value="7mo">7mo</option>
+                </select>
+                <br>
+                <label class="NEC" for="nota">Nota: </label>
+                <input type="number" id="nota" min="1" max="10">
+                <br>
+                <label class="NEC" for="materia">Materia: </label>
+                <select id="materia">
+                    <option value="Matemáticas">Matemáticas</option>
+                    <option value="Lengua">Lengua</option>
+                    <option value="Ciencias">Ciencias</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Educación Física">Educación Física</option>
+                    <option value="Historia">Historia</option>
+                    <option value="Geografía">Geografía</option>
+                    <option value="Química">Química</option>
+                    <option value="Física">Física</option>
+                    <option value="Inglés">Inglés</option>
+                </select>
+            </form>
+
+            <button class="botones" onclick="guardarEstudiante()">ENVIAR</button>
+            <button class="botones" onclick="borrarEstudiante()">BORRAR</button>
+
+            <div id="ultimoEstudiante"></div>
+        </div>
+
+
+        <button class="botonesPrincipales" onclick="verEstudiante()">Ver Estudiante</button>
+        <div id="verEstudiante">
+            <div id="resultadoEstudiante">
+
+            </div>
+            <button class="botones" id="borrarTodoE" onclick="borrarTodosEstudiantes()" style="display: none;">BORRAR ESTUDIANTES</button>
+        </div>
+    </div>
+    
+
+
+    <!-- DOCENTE -->
+    <div>
+        <button class="botonesPrincipales" onclick="crearDocente()">Crear Docente</button>
+        <div id="crearDocente" style="display: none;">
+            <h1 class="titulo">DOCENTES</h1>
+            <form>
+                <label class="NE" for="nombre">Nombre: </label>
+                    <input type="text" id="nombreDOC">
+                <br>
+                <label class="NE" for="cursoDOC">Curso: </label>
+                <select id="cursoDOC">
+                    <option value="1ro">1ro</option>
+                    <option value="2do">2do</option>
+                    <option value="3ro">3ro</option>
+                    <option value="4to">4to</option>
+                    <option value="5to">5to</option>
+                    <option value="6to">6to</option>
+                    <option value="7mo">7mo</option>
+                </select>
+                <br>
+                <label class="NE" for="especialidad">Especialidad: </label>
+                    <select id="especialidad">
+                        <option value="Matemáticas">Matemáticas</option>
+                        <option value="Lengua">Lengua</option>
+                        <option value="Ciencias">Ciencias</option>
+                        <option value="Programación">Programación</option>
+                        <option value="Educación Fisica">Educación Fisica</option>
+                        <option value="Historia">Historia</option>
+                        <option value="Geografía">Geografía</option>
+                        <option value="Química">Química</option>
+                        <option value="Física">Física</option>
+                        <option value="Inglés">Inglés</option>
+                    </select>
+            </form>
+
+            <button class="botones" onclick="guardarDocente()">ENVIAR</button>
+            <button class="botones" onclick="borrarDocente()">BORRAR</button>
+
+            <div id="ultimoDocente"></div>
+        </div>
+
+
+        <button class="botonesPrincipales" onclick="verDocente()">Ver Docente</button>
+        <div id="verDocente">
+            <div id="resultadoDocente">
+
+            </div>
+            <button class="botones" id="borrarTodoD" onclick="borrarTodosDocentes()" style="display: none;">BORRAR DOCENTES</button>
+        </div>
+    </div>
+
+
+
+    <!-- CURSOS -->
+    <div>
+        <button class="botonesPrincipales" onclick="verCursos()">Ver Cursos</button>
+        <div id="verCursos" style="display: none;">
+        </div>
+    </div>
+
+<script src="script.js"></script>  
+</body>
+</html>
